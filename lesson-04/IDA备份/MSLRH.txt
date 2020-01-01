@@ -1,0 +1,119 @@
+call    sub_456109
+	db 0E8h
+loc_456100:
+        jmp     short loc_45610E
+	db    0
+	db    0
+	db 0E8h
+	db 0F6h
+	db 0FFh
+	db 0FFh
+	db 0FFh
+sub_456109:
+	call    loc_456100
+
+==================================
+loc_45610E:
+ 	add     esp, 8
+        jz      short loc_456117
+	jnz     short loc_456117
+	db 0EBh
+	db    2
+loc_456117:
+        jmp     short loc_45611A
+	db 81h
+loc_45611A:
+	call    loc_456129
+byte_45611F:
+	db 0E8h
+loc_456120:
+        jmp     short loc_45612E
+	db    0
+	db    0
+        call    near ptr byte_45611F
+loc_456129:
+        call    loc_456120
+loc_45612E:
+	add     esp, 8
+	jz      short loc_456137
+	jnz     short loc_456137
+	db 0EBh
+	db    2
+loc_456137:
+	jmp     short loc_45613A
+	db 81h
+==================================
+loc_45613A:
+	push    eax
+	call    loc_456142
+	db 29h
+	db 5Ah
+loc_456142:
+	pop     eax
+	imul    eax, 3
+	call    loc_45614D
+        db 29h
+	db 5Ah
+loc_45614D:
+	add     esp, 4
+	pop     eax
+	jz      short loc_456157
+	jnz     short loc_456157
+	db 0EBh
+	db    2
+loc_456157:
+	jmp     short loc_45615A
+	db 81h
+loc_45615A:
+	rdtsc
+	push    eax
+	rdtsc
+	call    loc_45616E
+byte_456164:
+	db 0E8h
+loc_456165:
+	jmp     short loc_456173
+	db    0
+	db    0
+	call    near ptr byte_456164
+loc_45616E:
+	call    loc_456165
+loc_456173:
+	add     esp, 8
+	sub     eax, [esp]
+	jz      short loc_45617F
+	jnz     short loc_45617F
+	db 0EBh
+	db    2
+loc_45617F:
+	jmp     short loc_456182
+	db 81h
+loc_456182:
+	add     esp, 4
+	call    loc_456194
+	db 0E8h
+loc_45618B:
+	jmp     short loc_456199
+	db    0
+	db    0
+	call    near ptr unk_45618A
+loc_456194:
+        call    loc_45618B
+loc_456199:
+	add     esp, 8
+        cmp     eax, 0FFFh
+===============================================
+	jmp     short loc_4561A4
+	db 68h
+loc_4561A4:
+	jmp     short loc_4561A8   
+        db 0CDh
+	db  20h
+loc_4561A8:
+	jmp     short loc_4561AB
+	db 0E8h
+loc_4561AB:
+        ...
+        
+
+
